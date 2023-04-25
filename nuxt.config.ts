@@ -1,10 +1,24 @@
 
 export default defineNuxtConfig({
-  css: ["bootstrap/dist/css/bootstrap.min.css"],
+  css: ['~/assets/scss/main.scss'],
+  app:{
+    head:{
+      script: [
+        {
+          src: "/bootstrap/popper.min.js",
+          crossorigin: "anonymous"
+        },
+        {
+          src: "bootstrap/dist/js/bootstrap.bundle.min.js",
+          crossorigin: "anonymous"
+        }
+      ],
+    }
+  },
   runtimeConfig: {
     apiSecret: '123',
     public: {
-      apiBase: '/api'
+      apiBase: '/api' 
     }
   }
 });

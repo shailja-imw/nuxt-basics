@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
