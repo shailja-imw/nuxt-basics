@@ -1,5 +1,4 @@
 <script setup>
-import Simple from "~/layout/Simple.vue";
 const appConfig = useAppConfig();
 console.log("theme", appConfig.theme);
 const runtimeConfig = useRuntimeConfig();
@@ -10,8 +9,8 @@ console.log("getColor",getColor);
 
 <template>
   <div>
-    <Simple>
+      <NuxtLayout>
       <NuxtPage></NuxtPage>
-    </Simple>
+      </NuxtLayout>
   </div>
 </template>
