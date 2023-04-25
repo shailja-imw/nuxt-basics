@@ -1,6 +1,8 @@
 <script setup>
-import Comment from "~/components/Comment.vue";
 import comments from "~/comments.json";
+definePageMeta({
+  layout: 'default'
+});
 </script>
 
 <template>
