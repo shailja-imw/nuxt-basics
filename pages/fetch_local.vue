@@ -1,15 +1,15 @@
 <script setup>
-definePageMeta({
-  layout: 'default'
-});
 
 console.time('time');
-const { data:comments} = await useLazyFetch('http://localhost:5000/comments')
+const { data: comments } = await useFetch(
+  `http://localhost:5000/comments`,
+  {server:false}
+);
 console.timeEnd('time')
 </script>
 
 <template>
-  <div>
+   <div>
     <Comment :comments="comments"></Comment>    
   </div>
 </template>

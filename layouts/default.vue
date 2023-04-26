@@ -40,6 +40,16 @@ const date = useDateFormat(new Date)
                 >update</NuxtLink
               >
             </li>
+            <li class="nav-item">
+              <NuxtLink to="/gallery" class="nav-link active" aria-current="page"
+                >gallery</NuxtLink
+              >
+            </li>
+            <li class="nav-item">
+              <NuxtLink to="/users" class="nav-link active" aria-current="page"
+                >users</NuxtLink
+              >
+            </li>
           </ul>
           <form class="d-flex">
             {{ date }}

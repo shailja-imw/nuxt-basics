@@ -11,6 +11,7 @@ const { pending, data: users } = await useLazyAsyncData("users",
       })),
   }
 );
+console.log("users",users);
 </script>
 
 <template>
