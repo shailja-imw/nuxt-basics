@@ -2,6 +2,8 @@
 const props = defineProps(["galleryData"]);
 
 const posts = ref(props.galleryData);
+console.log("props",posts);
+
 </script>
 
 <template>
@@ -13,7 +15,7 @@ const posts = ref(props.galleryData);
         <p class="card-text text-truncate">
          {{ gallery.body }}
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <NuxtLink :to="`/update_${gallery.id}`" class="btn btn-primary">Go somewhere</NuxtLink>
       </div>
     </div>
   </div>
