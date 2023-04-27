@@ -9,7 +9,8 @@ const { pending, data: users } = await useLazyAsyncData("users",
         username: user.username,
         address: `${user.address.street} ${user.address.city} ${user.address.zipcode} `,
       })),
-  }
+  },
+  
 );
 console.log("users",users);
 </script>

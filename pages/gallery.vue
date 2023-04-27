@@ -1,10 +1,19 @@
 <script setup>
+
+const description = ref('My amazing Gallery site.')
+useHead({
+  meta: [
+    { name: 'description', content: description }
+  ],
+  title:'Gallery'
+})
+
+
 console.time("time");
 const { data: gallery, pending } = await useLazyFetch(
   "https://jsonplaceholder.typicode.com/posts"
 );
 console.timeEnd("time");
-console.log("use lazyFetch", gallery);
 
 </script>
 
