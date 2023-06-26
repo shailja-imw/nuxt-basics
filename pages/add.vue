@@ -4,7 +4,6 @@ const userDetails = reactive({
     firstName:'',
     lastName:''
 })
-
 //emitted event from child
 function onSubmit(lastName, firstName) {
   if (firstName != "" && lastName != "") {

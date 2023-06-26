@@ -3,7 +3,9 @@
 console.time('time');
 const { data: comments } = await useFetch(
   `http://localhost:5000/comments`,
-  {server:false}
+  {server:false,
+    
+  }
 );
 console.timeEnd('time')
 </script>
