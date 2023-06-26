@@ -9,7 +9,7 @@ useHead({
 
 
 console.time('time');
-const { data:comments} = await useLazyFetch('http://localhost:5000/comments')
+const { data:comments} = await useLazyFetch('http://localhost:5500/comments')
 console.timeEnd('time')
 </script>
 

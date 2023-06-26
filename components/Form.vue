@@ -19,12 +19,27 @@ function submitForm(firstName, lastName) {
   emit("onSubmit", firstName, lastName);
 }
 
+async function addUser(firstName,lastName){
+  const users = await useFetch('http://localhost:5001/users',{
+    headers: { "Content-type": "application/json" },
+    method: 'POST',
+    body:JSON.stringify({
+        id:Math.random(),
+        firstName:firstName,
+        lastName:lastName
+    })
+  })
+
+  console.log(users);
+}
+
 
 //ref from child to parent
 function handleSubmit(firstName, lastName) {
   if (firstName && lastName) {
     alert("Hello " + " " + lastName + " " + firstName);
-    refreshNuxtData()
+    addUser(firstName,lastName);
+    refreshNuxtData('firstName')
   } else {
     alert("please enter the first name and last name");
   }
