@@ -1,13 +1,12 @@
-version: '1'
+version: '3'
 services: 
   nuxt:
     build:
       context: .
     image: nuxt_basics
     container_name: nuxt_basics
-    command: npm run start
-    volumes:
-    - .:/app
-    -  /app/node_modules
+    command: sh ./start.sh
     ports:
     -  "3000:3000"
+    -  "3001:3001"
+    -  "5500:5500"
